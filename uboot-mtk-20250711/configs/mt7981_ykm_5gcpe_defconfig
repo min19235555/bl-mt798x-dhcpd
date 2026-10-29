@@ -50,7 +50,7 @@ CONFIG_CMD_PING=y
 CONFIG_CMD_TFTPPUT=y
 CONFIG_MTD=y
 CONFIG_MTDIDS_DEFAULT="nor0=nor0"
-CONFIG_MTDPARTS_DEFAULT="nor0:256k(bl2),64k(u-boot-env),32k(factory),32k(bdinfo),512k(fip),-(fit)"
+CONFIG_MTDPARTS_DEFAULT="nor0:256k(bl2),64k(u-boot-env),32k(factory),32k(bdinfo),512k(fip),-(ubi)"
 CONFIG_ENV_OVERWRITE=y
 CONFIG_ENV_IS_IN_MTD=y
 CONFIG_ENV_MTD_DEV="u-boot-env"
