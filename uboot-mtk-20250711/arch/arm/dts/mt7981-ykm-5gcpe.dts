@@ -24,8 +24,8 @@
 
 	config {
 		bootcmd = "mtkboardboot";
-		blink_led = "blue:wlan5g";
-		system_led = "green:wlan2g";
+		blink_led = "5G";
+		system_led = "2.4G";
 	};
 
 	memory@40000000 {
@@ -50,7 +50,7 @@
 		wps-button {
 			label = "wps";
 			linux,code = <KEY_WPS_BUTTON>;
-			gpios = <&pio 0 GPIO_ACTIVE_HIGH>;
+			gpios = <&pio 0 GPIO_ACTIVE_LOW>;
 			debounce-interval = <100>;
 		};
 	};
@@ -59,12 +59,12 @@
 		compatible = "gpio-leds";
 
 		status_blue: status {
-			label = "blue:wlan5g";
+			label = "5G";
 			gpios = <&pio 35 GPIO_ACTIVE_LOW>;
 		};
 
 		wlan2g {
-			label = "green:wlan2g";
+			label = "2.4G";
 			gpios = <&pio 34 GPIO_ACTIVE_LOW>;
 		};
 	};
